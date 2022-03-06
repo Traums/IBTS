@@ -1,0 +1,15 @@
+﻿  pch.cpp
+  dllmain.cpp
+  MathLibrary.cpp
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.cpp(15,6): warning C4273: fibonacci_init: несовместимое связывание dll
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.h(22,33): message : см. предыдущее определение "fibonacci_init"
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.cpp(26,6): warning C4273: fibonacci_next: несовместимое связывание dll
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.h(28,33): message : см. предыдущее определение "fibonacci_next"
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.cpp(47,20): warning C4273: fibonacci_current: несовместимое связывание dll
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.h(31,47): message : см. предыдущее определение "fibonacci_current"
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.cpp(53,10): warning C4273: fibonacci_index: несовместимое связывание dll
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\MathLibrary.h(34,37): message : см. предыдущее определение "fibonacci_index"
+  Выполнение Code Analysis для C/C++...
+  Создание кода...
+     Создается библиотека D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\x64\Debug\myDLL.lib и объект D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\x64\Debug\myDLL.exp
+  myDLL.vcxproj -> D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\x64\Debug\myDLL.dll

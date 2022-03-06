@@ -1,0 +1,2 @@
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\x64\Debug\myDLL.dll.lastcodeanalysissucceeded
+D:\Загрузки\OneDrive\ИБТС Хорьков\Project\myDLL\myDLL\x64\Debug\NativeCodeAnalysis.read.1.tlog
