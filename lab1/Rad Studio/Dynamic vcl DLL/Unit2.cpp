@@ -20,41 +20,37 @@ __fastcall TForm2::TForm2(TComponent* Owner)
 void __fastcall TForm2::Button1Click(TObject *Sender)
 {
 
-	typedef INT(CALLBACK* LPFNDLLFUNC1)();
-	typedef std::string(CALLBACK* LPFNDLLFUNC2)();
+	typedef INT(CALLBACK* PCreateMessageGroup)();
+	typedef wchar_t*(CALLBACK* PCreateMessageFIO)();
 	HINSTANCE hDLL = NULL;
 
-	LPFNDLLFUNC1 lpfnDllFunc1 = NULL;
-	LPFNDLLFUNC2 lpfnDllFunc2 = NULL;
+	PCreateMessageGroup CreateMessageGroup = NULL;
+	PCreateMessageFIO CreateMessageFIO = NULL;
 	hDLL = LoadLibraryW(L"DLL.dll");
 
 	if (hDLL != NULL) {
 
-		lpfnDllFunc1 = (LPFNDLLFUNC1)GetProcAddress(hDLL,"_printGroup");
-		lpfnDllFunc2 = (LPFNDLLFUNC2)GetProcAddress(hDLL,"_printFIO");
+		CreateMessageGroup = (PCreateMessageGroup)GetProcAddress(hDLL,"_printGroup");
+		CreateMessageFIO = (PCreateMessageFIO)GetProcAddress(hDLL,"_printFIO");
 
-		if (lpfnDllFunc1 != NULL || lpfnDllFunc2 != NULL )
+		if (CreateMessageGroup != NULL || CreateMessageFIO != NULL )
 		{
-			//Edit1->Text = "Такая функция есть";
 
-			int result = lpfnDllFunc1();
+			int result = CreateMessageGroup();
 			Edit1->Text = result;
 
-			std::string resultFIO = lpfnDllFunc2();
+			wchar_t* FIO = CreateMessageFIO();
 
-			char CharRes[resultFIO.length() + 1];
-			strcpy(CharRes, resultFIO.c_str());
-
-			Edit2->Text = CharRes;
+			Edit2->Text = FIO;
 		}
 		else
 		{
-			Edit1->Text = "Такой функции нет";
+			Edit1->Text = "Функция не найдена";
 		}
 	}
 	else
 	{
-	   Edit1->Text = "Ошибка загрузки DLL";
+	   Edit1->Text = "Ошибка DLL";
 	}
 
    FreeLibrary(hDLL);

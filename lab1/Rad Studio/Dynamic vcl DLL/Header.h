@@ -4,4 +4,4 @@
 #include <string>
 
 extern "C" __declspec(dllexport) int libmain();
-extern "C" __declspec(dllexport) std::string printFIO();
+extern "C" __declspec(dllexport) wchar_t* printFIO();

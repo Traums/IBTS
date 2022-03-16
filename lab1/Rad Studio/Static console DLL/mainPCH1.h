@@ -3,5 +3,5 @@
 #endif
 #include <string>
 
-extern "C" __declspec(dllimport)  int printGroup();
-extern "C" __declspec(dllimport)  std::string printFIO();
+extern "C" __declspec(dllexport)  int printGroup();
+extern "C" __declspec(dllexport)  wchar_t* printFIO();

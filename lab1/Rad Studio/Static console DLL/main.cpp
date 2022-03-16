@@ -14,17 +14,19 @@
 #include "DLL.cpp"
 
 
-
 int _tmain(int argc, _TCHAR* argv[])
 {
-	system("chcp 1251");
-    std::system("cls");
+	//system("chcp 1251");
+	setlocale(LC_ALL,"RUS");
+	std::system("cls");
 
-	std::cout<<"Ãðóïïà: ";
-	printGroup();
+	std::wcout<<L"Ãðóïïà: "<<	printGroup()<<"\n";
 
-	std::string str = printFIO();
-	std::cout<<str<<"\n\n";
+	wchar_t *Pointer;
+	Pointer = printFIO();
+
+	wchar_t Result = *Pointer;
+	std::wcout<<L"\nÔÈÎ: "<< Pointer <<"\n";
 
 	std::system("pause");
 	return 0;

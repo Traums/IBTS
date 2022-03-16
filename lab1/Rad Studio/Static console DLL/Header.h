@@ -4,5 +4,5 @@
 #pragma once
 #include <string>
 
-extern "C" int printGroup();
-extern "C" std::string printFIO();
+extern "C" __declspec(dllexport) int printGroup();
+extern "C" __declspec(dllexport) wchar_t* printFIO();

@@ -29,10 +29,10 @@ extern "C"
 		int GroupNumber = 571227;
 		return GroupNumber;
 	}
-	__declspec(dllexport) std::string printFIO()
+	__declspec(dllexport) wchar_t* printFIO()
 	{
-		static std::string FIO = "Мартюшев Дмитрий Александрович";
-        FIO = FIO.c_str();
+		wchar_t *FIO = new wchar_t[80];
+		wcscpy(FIO,L"Худякова Елена Алексеевна");
 		return FIO;
 	}
 

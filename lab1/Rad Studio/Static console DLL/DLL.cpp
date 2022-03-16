@@ -20,20 +20,23 @@
 #pragma hdrstop
 #pragma argsused
 #include <iostream>
-#include <string>
 #include "Header.h"
+#include <wchar.h>
+#include <stdio.h>
+#include <locale.h>
 
 extern "C"
 {
 	int printGroup()
 	{
-		std::cout<<"571227"<<"\n";
-		return 1;
+		//std::cout<<"571227"<<"\n";
+		int GroupNumber = 571227;
+		return GroupNumber;
 	}
-	std::string printFIO(){
-
-		std::string FIO = "Мартюшев Дмитрий Александрович";
-        return FIO;
+	wchar_t* printFIO(){
+		wchar_t *FIO = new wchar_t [80];
+		wcscpy(FIO,L"Мартюшев Дмитрий Александрович");
+		return FIO;
 	}
 }
 
