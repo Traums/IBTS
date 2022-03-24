@@ -29,12 +29,13 @@ extern "C"
 {
 	int printGroup()
 	{
+		//Г”ГіГ­ГЄГ¶ГЁГї ГўГ»ГўГ®Г¤Г  ГЈГ°ГіГЇГЇГ»
 		int GroupNumber = 571227;
 		return GroupNumber;
 	}
 	wchar_t* printFIO(){
 		wchar_t *FIO = new wchar_t [80];
-		wcscpy(FIO,L"Мартюшев Дмитрий Александрович");
+		wcscpy(FIO,L"ГЊГ Г°ГІГѕГёГҐГў Г„Г¬ГЁГІГ°ГЁГ© ГЂГ«ГҐГЄГ±Г Г­Г¤Г°Г®ГўГЁГ·");
 		return FIO;
 	}
 }
