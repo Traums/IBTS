@@ -29,6 +29,7 @@ extern "C"
 {
 	int printGroup()
 	{
+		//Функция вывода группы
 		//std::cout<<"571227"<<"\n";
 		int GroupNumber = 571227;
 		return GroupNumber;
