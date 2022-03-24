@@ -29,7 +29,6 @@ extern "C"
 {
 	int printGroup()
 	{
-		//std::cout<<"571227"<<"\n";
 		int GroupNumber = 571227;
 		return GroupNumber;
 	}
